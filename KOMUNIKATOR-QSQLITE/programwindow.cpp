@@ -91,9 +91,6 @@ void ProgramWindow::on_connectBtn_clicked()
         connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
     }
 
-
-
-
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
 
@@ -107,7 +104,6 @@ void ProgramWindow::on_connectBtn_clicked()
 
      connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
      */
-
 
 
     /*if(socket->state() == QAbstractSocket::ConnectedState) {
