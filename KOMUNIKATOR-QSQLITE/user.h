@@ -28,6 +28,8 @@ public:
 
     //zapis do pliku
     bool saveToFile(const QString &fileName) const;
+    bool saveToDatabase();
+
     static User loadFromFile(const QString &fileName);
    // QVector<User>loadAllFromFile(const QString &fileName);
     static QVector<User> loadAllFromFile(const QString &fileName);

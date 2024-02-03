@@ -1,4 +1,8 @@
 #include "user.h"
+#include "qdebug.h"
+#include "qsqldatabase.h"
+#include "qsqlerror.h"
+#include "qsqlquery.h"
 #include <QFile>
 #include <QTextStream>
 
@@ -85,6 +89,47 @@ void User::addFriend(size_t friendID)
 {
     m_friend_list.addFriend(friendID);
 }
+
+
+bool User::saveToDatabase()
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("Server_KOMUNIKATOR_Proj_PK\\UsersLogs.db");
+    if (!db.open())
+    {
+        qDebug() << "Error: connection with database fail";
+        return false;
+    }
+    else
+    {
+        qDebug() << "Database: connection ok";
+    }
+
+    QSqlQuery checkQuery;
+    checkQuery.prepare("SELECT * FROM users WHERE username = :username");
+    checkQuery.bindValue(":username", m_login);
+    if (checkQuery.exec() && checkQuery.next()) {
+        qDebug() << "User already exists: " << m_login;
+        return false;
+    }
+
+    QSqlQuery query;
+    query.prepare("INSERT INTO users (username, password) "
+                  "VALUES (:username, :password)");
+    query.bindValue(":username", m_login);
+    query.bindValue(":password", m_haslo);
+
+    if(!query.exec())
+    {
+        qDebug() << "Error: " << query.lastError();
+        db.close();
+        return false;
+    }
+
+    //db.close();
+    return true;
+}
+
 
 void User::deleteFirend(size_t friendID)
 {

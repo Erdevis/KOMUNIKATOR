@@ -25,6 +25,8 @@ private slots:
     void on_znajomiBtn_clicked();
 
     void on_connectBtn_clicked();
+    void readMessage();
+    void onConnected();
 
 private:
     Ui::ProgramWindow *ui;

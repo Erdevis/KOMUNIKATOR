@@ -15,6 +15,7 @@ public:
     void startServer();
     void addUser(const QString &username, const QString &password);
 
+
 signals:
     void updatedUserList(const QStringList &users);
 

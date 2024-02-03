@@ -49,7 +49,7 @@ void RegisterWindow::on_zaloguj_clicked()
 
     if(newUser != nullptr)
     {
-        if(newUser->saveToFile("user.txt"))
+        if(newUser->saveToDatabase())
         {
             emit zajerestruj(*newUser);
             this->close();

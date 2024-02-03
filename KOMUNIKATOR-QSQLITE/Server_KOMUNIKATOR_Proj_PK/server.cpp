@@ -33,7 +33,12 @@ void Server::startServer()
 void Server::incomingConnection(qintptr socketDescriptor)
 {
     QTcpSocket *socket = new QTcpSocket(this);
-    socket->setSocketDescriptor(socketDescriptor);
+
+ if (!socket->setSocketDescriptor(socketDescriptor)) {
+        qWarning() << "Nie można ustawić deskryptora gniazda:" << socket->errorString();
+        return;
+    }
+    //socket->setSocketDescriptor(socketDescriptor);
 
     connect(socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
     connect(socket, SIGNAL(disconnected()), this, SLOT(disconnected()));
@@ -55,6 +60,24 @@ void Server::readyRead()
     qDebug() << socket->socketDescriptor() << " Dane odebrane " << Data;
 
     // Tutaj możesz dodać logikę do obsługi danych przychodzących od klienta
+
+    // Przesyłanie wiadomości do wszystkich innych klientów
+    foreach(QTcpSocket *otherSocket, sockets.values()) {
+        if(otherSocket != socket) {
+            if(otherSocket->isOpen()) {
+                otherSocket->write(Data);
+            } else {
+                qDebug() << "Socket is not open";
+            }
+        }
+    }
+
+    /*
+    foreach(QTcpSocket *otherSocket, sockets.values()) {
+        if(otherSocket != socket) {
+            otherSocket->write(Data);
+        }
+    }*/
 }
 
 void Server::disconnected()
@@ -62,6 +85,8 @@ void Server::disconnected()
     QTcpSocket *socket = (QTcpSocket*)sender();
     qDebug() << socket->socketDescriptor() << " Klient rozłączony";
     sockets.remove(socket->socketDescriptor()); // Usuwamy klienta z listy
+
+     socket->deleteLater(); // Usuwamy gniazdo
 
     emit updatedUserList(getUserList());
 }
@@ -99,3 +124,20 @@ void Server::addUser(const QString &username, const QString &password)
     }
 }
 
+/*
+void Server::readyRead()
+{
+    QTcpSocket *socket = (QTcpSocket*)sender();
+    QByteArray Data = socket->readAll();
+
+    qDebug() << socket->socketDescriptor() << " Dane odebrane " << Data;
+
+    // Rozsyłanie wiadomości do wszystkich podłączonych klientów
+    foreach(QTcpSocket *clientSocket, sockets.values()) {
+        if(clientSocket != socket) { // Nie wysyłamy wiadomości z powrotem do nadawcy
+            clientSocket->write(Data);
+            clientSocket->flush();
+        }
+    }
+}
+*/

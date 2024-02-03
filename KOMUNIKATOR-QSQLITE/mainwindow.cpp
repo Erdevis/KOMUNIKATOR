@@ -21,7 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->logo->setPixmap(pix);
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+
     db.setDatabaseName("Server_KOMUNIKATOR_Proj_PK\\UsersLogs.db");
+
     bool db_ok = db.open();
 
     db.open();
