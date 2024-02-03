@@ -15,7 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->txtHaslo->setPlaceholderText("password");
     m_loggedInUser = nullptr;
     ui->logo->setFixedSize(50*1.578,50);
-    QPixmap pix("images/logo.png");
+    //QPixmap pix("images/Rekin.png");
+    QPixmap pix("images/Rekin.png");
     pix = pix.scaled(ui->logo->size(),Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->logo->setScaledContents(true);
     ui->logo->setPixmap(pix);

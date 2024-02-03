@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'registerwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.3.2
+** Created by: Qt User Interface Compiler version 6.6.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -37,12 +37,12 @@ public:
     void setupUi(QDialog *RegisterWindow)
     {
         if (RegisterWindow->objectName().isEmpty())
-            RegisterWindow->setObjectName(QString::fromUtf8("RegisterWindow"));
+            RegisterWindow->setObjectName("RegisterWindow");
         RegisterWindow->resize(536, 438);
         gridLayout_2 = new QGridLayout(RegisterWindow);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setObjectName("gridLayout_2");
         frame = new QFrame(RegisterWindow);
-        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setObjectName("frame");
         frame->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "            background-color: #f0f8ff; /* Delikatny niebieski kolor t\305\202a */\n"
 "            border-radius: 15px; /* Zaokr\304\205glenie rog\303\263w */\n"
@@ -50,9 +50,9 @@ public:
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         verticalLayout = new QVBoxLayout(frame);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName("verticalLayout");
         logintxt = new QTextEdit(frame);
-        logintxt->setObjectName(QString::fromUtf8("logintxt"));
+        logintxt->setObjectName("logintxt");
         QFont font;
         font.setFamilies({QString::fromUtf8("Arial")});
         font.setPointSize(12);
@@ -77,7 +77,7 @@ public:
         verticalLayout->addWidget(logintxt);
 
         passwordtxt = new QTextEdit(frame);
-        passwordtxt->setObjectName(QString::fromUtf8("passwordtxt"));
+        passwordtxt->setObjectName("passwordtxt");
         passwordtxt->setFont(font);
         passwordtxt->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -99,7 +99,7 @@ public:
         verticalLayout->addWidget(passwordtxt);
 
         repeatPasswordtxt = new QTextEdit(frame);
-        repeatPasswordtxt->setObjectName(QString::fromUtf8("repeatPasswordtxt"));
+        repeatPasswordtxt->setObjectName("repeatPasswordtxt");
         repeatPasswordtxt->setFont(font);
         repeatPasswordtxt->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -121,19 +121,19 @@ public:
         verticalLayout->addWidget(repeatPasswordtxt);
 
         frame_2 = new QFrame(frame);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setObjectName("frame_2");
         QFont font1;
         font1.setPointSize(12);
         frame_2->setFont(font1);
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         gridLayout = new QGridLayout(frame_2);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName("gridLayout");
         gridLayout->setHorizontalSpacing(65);
         gridLayout->setVerticalSpacing(0);
         gridLayout->setContentsMargins(-1, 25, -1, -1);
         zaloguj = new QPushButton(frame_2);
-        zaloguj->setObjectName(QString::fromUtf8("zaloguj"));
+        zaloguj->setObjectName("zaloguj");
         zaloguj->setMinimumSize(QSize(0, 40));
         zaloguj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -152,7 +152,7 @@ public:
         gridLayout->addWidget(zaloguj, 0, 0, 1, 1);
 
         cancel = new QPushButton(frame_2);
-        cancel->setObjectName(QString::fromUtf8("cancel"));
+        cancel->setObjectName("cancel");
         cancel->setMinimumSize(QSize(0, 40));
         cancel->setBaseSize(QSize(0, 0));
         cancel->setStyleSheet(QString::fromUtf8("QPushButton {\n"

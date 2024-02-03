@@ -148,7 +148,7 @@ QTextEdit:focus {
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="3" column="1">
+      <item row="5" column="1">
        <widget class="QListWidget" name="friendsList">
         <property name="minimumSize">
          <size>
@@ -176,10 +176,7 @@ QListWidget:focus {
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="IpEdit"/>
-      </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QPushButton" name="znajomiBtn">
         <property name="styleSheet">
          <string notr="true">QPushButton {
@@ -202,8 +199,51 @@ QPushButton:hover {
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="connectBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+}
+
+QPushButton:hover {
+    background-color: #008000; /* Kolor tła po najechaniu myszą - ciemniejszy zielony */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszą - biały */
+}</string>
+        </property>
         <property name="text">
          <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="IpEdit">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 30px; /* Minimalna wysokość pola - dostosuj według potrzeb */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="disconectBtn">
+        <property name="text">
+         <string>Disconect</string>
         </property>
        </widget>
       </item>

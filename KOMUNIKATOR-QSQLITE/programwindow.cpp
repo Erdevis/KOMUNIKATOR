@@ -12,6 +12,7 @@ ProgramWindow::ProgramWindow(QWidget *parent)
     ui->reading->setReadOnly(true);
     ui->writing->setPlaceholderText("message");
     ui->friendsList->hide();
+    ui->IpEdit->setPlaceholderText("Enter IP");
 
     socket = new QTcpSocket(this);
     connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
@@ -70,11 +71,28 @@ void ProgramWindow::updateUserList(const QStringList &users)
 
 void ProgramWindow::on_connectBtn_clicked()
 {
-    if(socket && socket->state() == QAbstractSocket::ConnectedState) {
+    if (socket && socket->state() == QAbstractSocket::ConnectedState)
+    {
         qDebug() << "Already connected to the server";
         return;
     }
+
     QString serverIp = ui->IpEdit->text();
+
+    if (!serverIp.isEmpty())
+    {
+        friendsIPList.append(serverIp); // Add the IP to the list
+
+        // Update the friendsList widget with the new list of IPs
+        ui->friendsList->addItem(serverIp);
+
+        // Rest of the code remains unchanged
+        socket->connectToHost(serverIp, 4500);
+        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+    }
+
+
+
 
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
@@ -99,7 +117,39 @@ void ProgramWindow::on_connectBtn_clicked()
     }*/
 }
 
+
+void ProgramWindow::on_disconectBtn_clicked()
+{
+    if (socket && socket->state() == QAbstractSocket::ConnectedState)
+    {
+        socket->disconnectFromHost();
+        qDebug() << "Disconnected from the server";
+    }
+    else
+    {
+        qDebug() << "Not connected to the server";
+    }
+}
+
+
+
 void ProgramWindow::onConnected()
 {
      qDebug() << "Connected to the server";
 }
+
+
+void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
+{
+    if (item)
+    {
+        QString selectedIP = item->text();
+        ui->IpEdit->setText(selectedIP);
+        ui->friendsList->hide();
+        ui->znajomiBtn->setText("Friends");
+    }
+}
+
+
+
+

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.3.2
+** Created by: Qt User Interface Compiler version 6.6.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -49,14 +49,14 @@ public:
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+            MainWindow->setObjectName("MainWindow");
         MainWindow->resize(795, 452);
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName("gridLayout");
         frame = new QFrame(centralwidget);
-        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setObjectName("frame");
         frame->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "            background-color: #f0f8ff; /* Delikatny niebieski kolor t\305\202a */\n"
 "            border-radius: 15px; /* Zaokr\304\205glenie rog\303\263w */\n"
@@ -64,9 +64,9 @@ public:
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         verticalLayout_2 = new QVBoxLayout(frame);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setObjectName("verticalLayout_2");
         txtLogin = new QTextEdit(frame);
-        txtLogin->setObjectName(QString::fromUtf8("txtLogin"));
+        txtLogin->setObjectName("txtLogin");
         txtLogin->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
 "    color: #000000; /* Kolor tekstu - czarny */\n"
@@ -88,7 +88,7 @@ public:
         verticalLayout_2->addWidget(txtLogin);
 
         txtHaslo = new QTextEdit(frame);
-        txtHaslo->setObjectName(QString::fromUtf8("txtHaslo"));
+        txtHaslo->setObjectName("txtHaslo");
         txtHaslo->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
 "    color: #000000; /* Kolor tekstu - czarny */\n"
@@ -109,14 +109,14 @@ public:
         verticalLayout_2->addWidget(txtHaslo);
 
         frame_2 = new QFrame(frame);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setObjectName("frame_2");
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         verticalLayout = new QVBoxLayout(frame_2);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(-1, 35, -1, -1);
         btnLogin = new QPushButton(frame_2);
-        btnLogin->setObjectName(QString::fromUtf8("btnLogin"));
+        btnLogin->setObjectName("btnLogin");
         btnLogin->setMinimumSize(QSize(0, 40));
         btnLogin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -134,7 +134,7 @@ public:
         verticalLayout->addWidget(btnLogin);
 
         btnRejestracja = new QPushButton(frame_2);
-        btnRejestracja->setObjectName(QString::fromUtf8("btnRejestracja"));
+        btnRejestracja->setObjectName("btnRejestracja");
         btnRejestracja->setMinimumSize(QSize(0, 40));
         btnRejestracja->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -158,27 +158,27 @@ public:
         gridLayout->addWidget(frame, 1, 0, 1, 1);
 
         frame_3 = new QFrame(centralwidget);
-        frame_3->setObjectName(QString::fromUtf8("frame_3"));
+        frame_3->setObjectName("frame_3");
         frame_3->setMinimumSize(QSize(0, 60));
         frame_3->setFrameShape(QFrame::StyledPanel);
         frame_3->setFrameShadow(QFrame::Raised);
         horizontalLayout = new QHBoxLayout(frame_3);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName("horizontalLayout");
         frame_4 = new QFrame(frame_3);
-        frame_4->setObjectName(QString::fromUtf8("frame_4"));
+        frame_4->setObjectName("frame_4");
         frame_4->setFrameShape(QFrame::StyledPanel);
         frame_4->setFrameShadow(QFrame::Raised);
 
         horizontalLayout->addWidget(frame_4);
 
         logo = new QLabel(frame_3);
-        logo->setObjectName(QString::fromUtf8("logo"));
+        logo->setObjectName("logo");
         logo->setScaledContents(true);
 
         horizontalLayout->addWidget(logo);
 
         frame_5 = new QFrame(frame_3);
-        frame_5->setObjectName(QString::fromUtf8("frame_5"));
+        frame_5->setObjectName("frame_5");
         frame_5->setFrameShape(QFrame::StyledPanel);
         frame_5->setFrameShadow(QFrame::Raised);
 
@@ -189,11 +189,11 @@ public:
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 795, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
+        statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
