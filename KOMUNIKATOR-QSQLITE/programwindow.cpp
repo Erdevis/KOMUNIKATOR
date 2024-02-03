@@ -97,9 +97,9 @@ void ProgramWindow::on_connectBtn_clicked()
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
 
-    socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
+    //socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
 
-    connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+    //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
 
     /*
     QString serverIp = ui->IpEdit->text();
