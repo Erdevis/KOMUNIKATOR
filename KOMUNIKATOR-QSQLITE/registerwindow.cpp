@@ -33,11 +33,11 @@ User* RegisterWindow::createUserFromInput()
     if(password != repeatPassword)
     {
         QMessageBox mesBox;
-         mesBox.setText("NIEPRAWIDLOWE HASLO");
+        mesBox.setText("NIEPRAWIDLOWE HASLO");
         mesBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Close);
-         mesBox.setIcon(QMessageBox::Warning);
+        mesBox.setIcon(QMessageBox::Warning);
         mesBox.exec();
-         return nullptr;
+        return nullptr;
     }
     return new User(login,password);
 
@@ -56,5 +56,3 @@ void RegisterWindow::on_zaloguj_clicked()
         }
     }
 }
-
-

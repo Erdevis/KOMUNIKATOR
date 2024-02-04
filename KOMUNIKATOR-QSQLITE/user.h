@@ -29,7 +29,7 @@ public:
     bool saveToDatabase();
 
     static User loadFromFile(const QString &fileName);
-   // QVector<User>loadAllFromFile(const QString &fileName);
+    // QVector<User>loadAllFromFile(const QString &fileName);
     static QVector<User> loadAllFromFile(const QString &fileName);
     static bool userExists(const QVector<User> &users, const QString &login,const QString &haslo);
 

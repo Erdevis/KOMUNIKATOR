@@ -130,6 +130,3 @@ bool User::saveToDatabase()
 User::~User()
 {
 }
-
-
-

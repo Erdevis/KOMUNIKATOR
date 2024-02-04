@@ -1,3 +1,11 @@
+/********************************************************************************
+** Form generated from reading UI file 'programwindow.ui'
+**
+** Created by: Qt User Interface Compiler version 6.6.1
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
 #ifndef UI_PROGRAMWINDOW_H
 #define UI_PROGRAMWINDOW_H
 
@@ -75,7 +83,8 @@ public:
 "QTextEdit:focus {\n"
 "    border: 1px solid #555555; /* Ustaw obramowanie na kolor obramowania bez zmiany grubo\305\233ci */\n"
 "    outline: none; /* Wy\305\202\304\205czanie pod\305\233wietlenia po aktywacji */\n"
-"}"));
+"}\n"
+""));
 
         verticalLayout->addWidget(reading);
 
@@ -213,6 +222,20 @@ public:
 
         disconectBtn = new QPushButton(frame_5);
         disconectBtn->setObjectName("disconectBtn");
+        disconectBtn->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #ffffff; /* Kolor t\305\202a - czerwony */\n"
+"    color: #000000; /* Kolor tekstu - czarny */\n"
+"    border: none; /* Usuni\304\231cie obramowania */\n"
+"    border-radius: 15px; /* Zaokr\304\205glenie rog\303\263w */\n"
+"    padding: 10px; /* Wewn\304\231trzny odst\304\231p */\n"
+"    transition: background-color 0.3s ease; /* Dodanie p\305\202ynnej animacji pod\305\233wietlenia */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #ff0000; /* Kolor t\305\202a po najechaniu mysz\304\205 - czerwony */\n"
+"    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszk\304\205 - bia\305\202y */\n"
+"    border: 2px solid #ffffff; /* Dodanie bia\305\202ego obramowania po najechaniu myszk\304\205 */\n"
+"}"));
 
         gridLayout->addWidget(disconectBtn, 1, 1, 1, 1);
 

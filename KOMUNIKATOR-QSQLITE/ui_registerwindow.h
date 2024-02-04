@@ -38,7 +38,7 @@ public:
     {
         if (RegisterWindow->objectName().isEmpty())
             RegisterWindow->setObjectName("RegisterWindow");
-        RegisterWindow->resize(536, 438);
+        RegisterWindow->resize(536, 494);
         gridLayout_2 = new QGridLayout(RegisterWindow);
         gridLayout_2->setObjectName("gridLayout_2");
         frame = new QFrame(RegisterWindow);

@@ -65,7 +65,8 @@
 QTextEdit:focus {
     border: 1px solid #555555; /* Ustaw obramowanie na kolor obramowania bez zmiany grubości */
     outline: none; /* Wyłączanie podświetlenia po aktywacji */
-}</string>
+}
+</string>
         </property>
        </widget>
       </item>
@@ -242,6 +243,22 @@ QLineEdit:focus {
       </item>
       <item row="1" column="1">
        <widget class="QPushButton" name="disconectBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - czerwony */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+    transition: background-color 0.3s ease; /* Dodanie płynnej animacji podświetlenia */
+}
+
+QPushButton:hover {
+    background-color: #ff0000; /* Kolor tła po najechaniu myszą - czerwony */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszką - biały */
+    border: 2px solid #ffffff; /* Dodanie białego obramowania po najechaniu myszką */
+}</string>
+        </property>
         <property name="text">
          <string>Disconect</string>
         </property>

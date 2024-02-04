@@ -35,6 +35,7 @@ private:
     Ui::ProgramWindow *ui;
     QTcpSocket *socket;
     QStringList friendsIPList;
+    void addMessage(const QString &message, bool isSentByUser);
 };
 
 #endif // PROGRAMWINDOW_H
