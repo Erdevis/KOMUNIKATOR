@@ -1,6 +1,5 @@
 #include "server.h"
 
-
 Server::Server(QObject *parent) :
     QTcpServer(parent)
 {
@@ -27,7 +26,6 @@ void Server::startServer()
         sockets.remove(i);
         emit updatedUserList(getUserList());
     }
-
 }
 
 void Server::incomingConnection(qintptr socketDescriptor)
@@ -71,7 +69,6 @@ void Server::readyRead()
             }
         }
     }
-
     /*
     foreach(QTcpSocket *otherSocket, sockets.values()) {
         if(otherSocket != socket) {
@@ -84,12 +81,40 @@ void Server::disconnected()
 {
     QTcpSocket *socket = (QTcpSocket*)sender();
     qDebug() << socket->socketDescriptor() << " Klient rozłączony";
+
+    // Usuwamy klienta z listy
+    sockets.remove(socket->socketDescriptor());
+
+    // Usuwamy gniazdo
+    socket->deleteLater();
+
+    emit updatedUserList(getUserList());
+}
+
+/*
+void Server::disconnected()
+{
+    QTcpSocket *socket = (QTcpSocket*)sender();
+    qDebug() << socket->socketDescriptor() << " Klient rozłączony";
     sockets.remove(socket->socketDescriptor()); // Usuwamy klienta z listy
 
      socket->deleteLater(); // Usuwamy gniazdo
 
     emit updatedUserList(getUserList());
-}
+
+     // Ponownie uruchamiamy nasłuchiwanie serwera
+    if(!this->isListening()){
+
+        if(!this->listen(QHostAddress::Any, 4500))
+        {
+           qDebug() << "Nie mozna uruchomic serwera";
+        }
+        else
+        {
+           qDebug() << "Serwer uruchomiony!";
+        }
+    }
+}*/
 
 QStringList Server::getUserList()
 {
@@ -124,20 +149,29 @@ void Server::addUser(const QString &username, const QString &password)
     }
 }
 
-/*
-void Server::readyRead()
-{
-    QTcpSocket *socket = (QTcpSocket*)sender();
-    QByteArray Data = socket->readAll();
+void Server::createDatabase(){
 
-    qDebug() << socket->socketDescriptor() << " Dane odebrane " << Data;
+    DbConnection = QSqlDatabase::addDatabase("QSQLITE");
+    DbConnection.setDatabaseName("UsersLogs.db");
+    DbConnection.open();
 
-    // Rozsyłanie wiadomości do wszystkich podłączonych klientów
-    foreach(QTcpSocket *clientSocket, sockets.values()) {
-        if(clientSocket != socket) { // Nie wysyłamy wiadomości z powrotem do nadawcy
-            clientSocket->write(Data);
-            clientSocket->flush();
-        }
+    QSqlQuery query;
+    query.prepare("CREATE TABLE IF NOT EXISTS users ("
+                  "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                  "username TEXT UNIQUE NOT NULL, "
+                  "password TEXT NOT NULL"
+                  ")");
+    if (!query.exec()) {
+        qDebug() << "Error creating table: " << query.lastError();
     }
 }
-*/
+
+void Server::removeUser(const QString &username)
+{
+    QSqlQuery query;
+    query.prepare("DELETE FROM users WHERE username = :username");
+    query.bindValue(":username", username);
+    if (!query.exec()) {
+        qDebug() << "Error removing user: " << query.lastError();
+    }
+}

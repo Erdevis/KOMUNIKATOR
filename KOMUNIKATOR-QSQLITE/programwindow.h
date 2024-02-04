@@ -28,14 +28,7 @@ private slots:
     void on_connectBtn_clicked();
     void readMessage();
     void onConnected();
-
-
-
     void on_friendsList_itemClicked(QListWidgetItem *item);
-
-
-
-
     void on_disconectBtn_clicked();
 
 private:

@@ -1,11 +1,3 @@
-/********************************************************************************
-** Form generated from reading UI file 'programwindow.ui'
-**
-** Created by: Qt User Interface Compiler version 6.6.1
-**
-** WARNING! All changes made in this file will be lost when recompiling UI file!
-********************************************************************************/
-
 #ifndef UI_PROGRAMWINDOW_H
 #define UI_PROGRAMWINDOW_H
 

@@ -85,11 +85,6 @@ bool User::userExists(const QVector<User> &users, const QString &login, const QS
     return false;
 }
 
-void User::addFriend(size_t friendID)
-{
-    m_friend_list.addFriend(friendID);
-}
-
 
 bool User::saveToDatabase()
 {
@@ -131,10 +126,6 @@ bool User::saveToDatabase()
 }
 
 
-void User::deleteFirend(size_t friendID)
-{
-    m_friend_list.deleteFirend(friendID);
-}
 
 User::~User()
 {

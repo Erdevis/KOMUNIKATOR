@@ -7,21 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    DbConnection = QSqlDatabase::addDatabase("QSQLITE");
-    DbConnection.setDatabaseName("UsersLogs.db");
-    DbConnection.open();
-
-    QSqlQuery query;
-    query.prepare("CREATE TABLE IF NOT EXISTS users ("
-                  "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                  "username TEXT UNIQUE NOT NULL, "
-                  "password TEXT NOT NULL"
-                  ")");
-    if (!query.exec()) {
-        qDebug() << "Error creating table: " << query.lastError();
-    }
-
-    server.addUser("user1","pass1");
+    server.createDatabase();  
 
     connect(&server, &Server::updatedUserList, this, &MainWindow::updateUserList);
     server.startServer();

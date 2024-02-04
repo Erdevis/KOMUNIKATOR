@@ -308,12 +308,6 @@ debug\moc_mainwindow.cpp: mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\QTcpSocket \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\qtcpsocket.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMap \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSql \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSqlDepends \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCore \
@@ -447,11 +441,17 @@ debug\moc_mainwindow.cpp: mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtcoreversion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriver.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriverplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlfield.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlindex.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrecord.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquerymodel.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaldelegate.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
@@ -568,12 +568,223 @@ debug\moc_server.cpp: server.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\qtcpsocket.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvariant.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMap \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSql \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSqlDepends \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCore \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCoreDepends \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20algorithm.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20functional.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20iterator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstracteventdispatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractnativeeventfilter.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qapplicationstatic.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMutex \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmutex.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuture.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthread.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qexception.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpointer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpromise.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qassociativeiterable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbasictimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbitarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbuffer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcache.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcalendar.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlocale.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborvalue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdatetime.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborcommon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qurl.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\quuid.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcbormap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstream.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstreamreader.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstreamwriter.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcollator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcommandlineoption.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcommandlineparser.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qconcatenatetablesproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcryptographichash.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdir.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfileinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdiriterator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qeasingcurve.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qendian.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfactoryinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfileselector.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QObject \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QStringList \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfilesystemwatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuturesynchronizer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuturewatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qidentityproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjnienvironment.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QScopedPointer \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjniobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonvalue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsondocument.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlibrary.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlibraryinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qversionnumber.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qline.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpoint.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlockfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qloggingcategory.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmargins.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmessageauthenticationcode.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmetaobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimedata.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimedatabase.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimetype.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qobjectcleanuphandler.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qoperatingsystemversion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qparallelanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpauseanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpluginloader.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qprocess.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qproperty.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpropertyprivate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpropertyanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvariantanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qqueue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrandom.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qreadwritelock.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrect.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsize.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qresource.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsavefile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qscopedvaluerollback.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsemaphore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsequentialanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsequentialiterable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsettings.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsharedmemory.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsignalmapper.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsimd.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsocketnotifier.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsortfilterproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstack.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstandardpaths.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstorageinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstringlistmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsystemsemaphore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtemporarydir.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtemporaryfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtextboundaryfinder.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthreadstorage.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimeline.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimezone.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtranslator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtransposeproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qurlquery.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvector.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwaitcondition.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QDeadlineTimer \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qxmlstream.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtcoreversion.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriver.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriverplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlfield.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlindex.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrecord.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquerymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaldelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qaction.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qicon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qcolor.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qrgb.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qimage.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtransform.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qregion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpalette.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qbrush.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfont.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qcursor.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qevent.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qscreen.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QList \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QRect \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QSize \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QSizeF \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\QTransform \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qlistview.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qcombobox.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaltablemodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqltablemodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlresult.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlversion.h \
 		debug\moc_predefs.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\bin\moc.exe
 	D:\APPLICATIONS\QT\6.3.2\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/Visual_Studio_etc/WAZNE-KOMUNIKATOR/AKTUALNA_KOMUNIKATOR/KOMUNIKATOR-QSQLITE/Server_KOMUNIKATOR_Proj_PK/debug/moc_predefs.h -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/mkspecs/win32-msvc -ID:/Visual_Studio_etc/WAZNE-KOMUNIKATOR/AKTUALNA_KOMUNIKATOR/KOMUNIKATOR-QSQLITE/Server_KOMUNIKATOR_Proj_PK -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include/QtWidgets -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include/QtGui -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include/QtNetwork -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include/QtSql -ID:/APPLICATIONS/QT/6.3.2/msvc2019_64/include/QtCore -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\ATLMFC\include" -I"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt" server.h -o debug\moc_server.cpp
@@ -747,12 +958,6 @@ debug\main.obj: main.cpp mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\QTcpSocket \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\qtcpsocket.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMap \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSql \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSqlDepends \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCore \
@@ -886,11 +1091,17 @@ debug\main.obj: main.cpp mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtcoreversion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriver.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriverplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlfield.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlindex.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrecord.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquerymodel.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaldelegate.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
@@ -1064,12 +1275,6 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\QTcpSocket \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\qtcpsocket.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMap \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSql \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSqlDepends \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCore \
@@ -1203,11 +1408,17 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qxmlstream.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtcoreversion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriver.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriverplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlfield.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlindex.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrecord.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquerymodel.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaldelegate.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
@@ -1341,12 +1552,223 @@ debug\server.obj: server.cpp server.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtNetwork\qtcpsocket.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvariant.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMap \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSql \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\QtSqlDepends \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCore \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QtCoreDepends \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20algorithm.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20functional.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\q20iterator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstracteventdispatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractnativeeventfilter.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qabstractproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qapplicationstatic.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QMutex \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmutex.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuture.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthread.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qexception.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpointer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpromise.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qassociativeiterable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbasictimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbitarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbuffer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qbytearraymatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcache.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcalendar.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlocale.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborvalue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdatetime.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborcommon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qurl.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\quuid.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcbormap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstream.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstreamreader.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcborstreamwriter.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcollator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcommandlineoption.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcommandlineparser.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qconcatenatetablesproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qcryptographichash.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdir.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfiledevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfileinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qdiriterator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qeasingcurve.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qendian.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfactoryinterface.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfileselector.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QObject \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QStringList \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfilesystemwatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuturesynchronizer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qfuturewatcher.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qidentityproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjnienvironment.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QScopedPointer \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjniobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonarray.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonvalue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsondocument.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qjsonobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlibrary.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlibraryinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qversionnumber.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qline.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpoint.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qlockfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qloggingcategory.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmargins.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmessageauthenticationcode.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmetaobject.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimedata.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimedatabase.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qmimetype.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qobjectcleanuphandler.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qoperatingsystemversion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qparallelanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpauseanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpluginloader.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qprocess.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qproperty.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpropertyprivate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qpropertyanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvariantanimation.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qqueue.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrandom.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qreadwritelock.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qrect.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsize.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qresource.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsavefile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qscopedvaluerollback.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsemaphore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsequentialanimationgroup.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsequentialiterable.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsettings.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsharedmemory.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsignalmapper.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsimd.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsocketnotifier.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsortfilterproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstack.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstandardpaths.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstorageinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qstringlistmodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qsystemsemaphore.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtemporarydir.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtemporaryfile.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtextboundaryfinder.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qthreadstorage.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimeline.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimer.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtimezone.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtranslator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtransposeproxymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qurlquery.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qvector.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwaitcondition.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QDeadlineTimer \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qwineventnotifier.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qxmlstream.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\qtcoreversion.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlglobal.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsql-config.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriver.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldriverplugin.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlerror.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlfield.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlindex.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrecord.h \
 		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquery.h \
-		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqldatabase.h
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlquerymodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaldelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleditemdelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qaction.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qicon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qcolor.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qrgb.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qimage.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qtransform.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qregion.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpalette.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qbrush.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfont.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qcursor.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qevent.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qscreen.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QList \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QRect \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QSize \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtCore\QSizeF \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\QTransform \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qlistview.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtWidgets\qcombobox.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlrelationaltablemodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqltablemodel.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qsqlresult.h \
+		D:\APPLICATIONS\QT\6.3.2\msvc2019_64\include\QtSql\qtsqlversion.h
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 

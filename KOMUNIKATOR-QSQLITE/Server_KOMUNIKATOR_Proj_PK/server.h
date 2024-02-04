@@ -4,6 +4,7 @@
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
 #include <QMap>
+#include <QtSql>
 #include "qsqlerror.h"
 #include "qsqlquery.h"
 
@@ -14,6 +15,8 @@ public:
     explicit Server(QObject *parent = nullptr);
     void startServer();
     void addUser(const QString &username, const QString &password);
+    void createDatabase();
+    void removeUser(const QString &username);
 
 
 signals:
@@ -27,9 +30,10 @@ private slots:
     void disconnected();
 
 private:
+    QStringList getUserList();
     QMap<int, QTcpSocket*> sockets; // Zmieniamy klucz na int
     int nextId = 1; // Dodajemy licznik
-    QStringList getUserList();
+    QSqlDatabase DbConnection;
 
 };
 

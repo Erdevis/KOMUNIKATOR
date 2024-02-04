@@ -1,6 +1,6 @@
 #ifndef USER_H
 #define USER_H
-#include "friend_list.h"
+//#include "friend_list.h"
 #include <QString>
 
 class User
@@ -13,7 +13,7 @@ private:
     QString m_nazwisko;
     QString m_login;
     QString m_haslo;
-    Friend_list m_friend_list;
+    //Friend_list m_friend_list;
 public:
     User(QString m_login, QString m_haslo);
     size_t getId(){return m_ID_user;}
@@ -23,8 +23,6 @@ public:
     //metody
     bool log_in(const QString& login,const QString& haslo)const;
 
-    void addFriend(size_t friendID);
-    void deleteFirend(size_t friendID);
 
     //zapis do pliku
     bool saveToFile(const QString &fileName) const;

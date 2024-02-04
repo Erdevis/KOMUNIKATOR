@@ -16,6 +16,7 @@ ProgramWindow::ProgramWindow(QWidget *parent)
 
     socket = new QTcpSocket(this);
     connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    connect(socket, &QTcpSocket::connected,this,&ProgramWindow::onConnected);
 
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
@@ -25,10 +26,24 @@ void ProgramWindow::readMessage()
 {
     while(socket->canReadLine()) {
         QString line = QString::fromUtf8(socket->readLine()).trimmed();
+        // Dodaj obsługę błędów tutaj
+        if(line.isEmpty() || line.isNull()) {
+            qDebug() << "Otrzymano pustą linię lub błąd odczytu";
+            continue;
+        }
         ui->reading->append(line);
     }
 }
 
+/*
+void ProgramWindow::readMessage()
+{
+    while(socket->canReadLine()) {
+        QString line = QString::fromUtf8(socket->readLine()).trimmed();
+        ui->reading->append(line);
+    }
+}
+*/
 ProgramWindow::~ProgramWindow()
 {
     delete ui;
@@ -68,7 +83,6 @@ void ProgramWindow::updateUserList(const QStringList &users)
     // Tutaj możesz dodać logikę do aktualizacji listy użytkowników
 }
 
-
 void ProgramWindow::on_connectBtn_clicked()
 {
     if (socket && socket->state() == QAbstractSocket::ConnectedState)
@@ -88,24 +102,18 @@ void ProgramWindow::on_connectBtn_clicked()
 
         // Rest of the code remains unchanged
         socket->connectToHost(serverIp, 4500);
-        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+        //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
     }
 
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
-
     //socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
-
     //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
-
     /*
     QString serverIp = ui->IpEdit->text();
     socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
-
      connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
      */
-
-
     /*if(socket->state() == QAbstractSocket::ConnectedState) {
         qDebug() << "Connected to the server";
     } else {
@@ -113,9 +121,23 @@ void ProgramWindow::on_connectBtn_clicked()
     }*/
 }
 
-
 void ProgramWindow::on_disconectBtn_clicked()
 {
+
+    if (socket && socket->state() == QAbstractSocket::ConnectedState)
+    {
+        socket->disconnectFromHost();
+        if (socket->state() != QAbstractSocket::UnconnectedState)
+        {
+            socket->waitForDisconnected();
+        }
+        qDebug() << "Disconnected from the server";
+    }
+    else
+    {
+        qDebug() << "Not connected to the server";
+    }
+    /*
     if (socket && socket->state() == QAbstractSocket::ConnectedState)
     {
         socket->disconnectFromHost();
@@ -124,16 +146,13 @@ void ProgramWindow::on_disconectBtn_clicked()
     else
     {
         qDebug() << "Not connected to the server";
-    }
+    }*/
 }
-
-
 
 void ProgramWindow::onConnected()
 {
      qDebug() << "Connected to the server";
 }
-
 
 void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
 {
