@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProgramWindow</class>
+ <widget class="QDialog" name="ProgramWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>594</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" rowspan="2">
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+       <horstretch>50</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+            background-color: #f0f8ff; /* Delikatny niebieski kolor tła */
+            border-radius: 15px; /* Zaokrąglenie rogów */
+        }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTextEdit" name="reading">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 100px; /* Minimalna wysokość pola */
+}
+
+QTextEdit:focus {
+    border: 1px solid #555555; /* Ustaw obramowanie na kolor obramowania bez zmiany grubości */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}
+</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="send">
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+}
+
+QPushButton:hover {
+    background-color: #1e90ff; /* Kolor tła po najechaniu myszą - niebieski */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszą - biały */
+}</string>
+        </property>
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="writing">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 100px; /* Minimalna wysokość pola */
+}
+
+QTextEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QFrame" name="frame_5">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="5" column="1">
+       <widget class="QListWidget" name="friendsList">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>122</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 100px; /* Minimalna wysokość pola */
+}
+
+QListWidget:focus {
+    border: 2px solid #1e90ff; /* Ustaw obramowanie na kolor obramowania bez zmiany grubości */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="znajomiBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+}
+
+QPushButton:hover {
+    background-color: #1e90ff; /* Kolor tła po najechaniu myszą - niebieski */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszą - biały */
+}</string>
+        </property>
+        <property name="text">
+         <string>Friends</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="connectBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+}
+
+QPushButton:hover {
+    background-color: #008000; /* Kolor tła po najechaniu myszą - ciemniejszy zielony */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszą - biały */
+}</string>
+        </property>
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="IpEdit">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 30px; /* Minimalna wysokość pola - dostosuj według potrzeb */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="disconectBtn">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #ffffff; /* Kolor tła - czerwony */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: none; /* Usunięcie obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów */
+    padding: 10px; /* Wewnętrzny odstęp */
+    transition: background-color 0.3s ease; /* Dodanie płynnej animacji podświetlenia */
+}
+
+QPushButton:hover {
+    background-color: #ff0000; /* Kolor tła po najechaniu myszą - czerwony */
+    color: #ffffff; /* Zmiana koloru tekstu po najechaniu myszką - biały */
+    border: 2px solid #ffffff; /* Dodanie białego obramowania po najechaniu myszką */
+}</string>
+        </property>
+        <property name="text">
+         <string>Disconect</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
