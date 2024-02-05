@@ -2,6 +2,7 @@
 #include <qtcpsocket>
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/qtcpsocket>
+#include "qregularexpression.h"
 #include "ui_programwindow.h"
 
 ProgramWindow::ProgramWindow(const QString &loggedInUser, QWidget *parent)
@@ -19,20 +20,7 @@ ProgramWindow::ProgramWindow(const QString &loggedInUser, QWidget *parent)
     connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
     connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
 }
-/*
-void ProgramWindow::readMessage()
-{
-    while(socket->canReadLine()) {
-        QString line = QString::fromUtf8(socket->readLine()).trimmed();
-        // Dodaj obsługę błędów tutaj
-        if(line.isEmpty() || line.isNull()) {
-            qDebug() << "Otrzymano pustą linię lub błąd odczytu";
-            continue;
-        }
-        ui->reading->append(line);
-    }
-}
-*/
+
 void ProgramWindow::readMessage()
 {
     while (socket->canReadLine())
@@ -44,8 +32,7 @@ void ProgramWindow::readMessage()
             continue;
         }
 
-        // Determine whether the message is sent by the user or received
-        qDebug()<<line;  //bool isSentByUser = line.startsWith(currentUsername + ":");
+        qDebug() << "otrzymujacy";  // Wyświetl otrzymaną wiadomość w konsoli
         addMessage(line, false);
     }
 }
@@ -53,22 +40,23 @@ void ProgramWindow::readMessage()
 
 void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
 {
-    /*
-    QVBoxLayout layout;
-    if(isSentByUser)
+    qDebug()<< message;
+    QString formattedMessage;
+
+    // Format the message based on the user role (sender/receiver)
+    if (isSentByUser)
     {
-
-
-        ui->reading->setAlignment(Qt::AlignLeft);
+        // Wiadomość wysłana przez użytkownika (po prawej stronie)
+         formattedMessage = "<b> Me: </b>" + message;
     }
     else
     {
-
-        ui->reading->setAlignment(Qt::AlignRight);
+        // Wiadomość odebrana (po lewej stronie)
+         formattedMessage = "<b> Friend: </b>" + message;
     }
-    ui->reading->append(message);
-    */
 
+    // Dodaj sformatowaną wiadomość do interfejsu użytkownika
+    ui->reading->append(formattedMessage);
 }
 
 ProgramWindow::~ProgramWindow()
@@ -86,9 +74,13 @@ void ProgramWindow::on_send_clicked()
 
     QString text;
     text = ui->writing->toPlainText();
+    addMessage(text, true);
     text.append("\n");
     socket->write(text.toUtf8());
-    addMessage(text, true);
+
+    qDebug()<< "wysylajacy";
+
+
     ui->writing->clear();
 }
 
@@ -154,11 +146,10 @@ void ProgramWindow::on_disconectBtn_clicked()
     if (socket && socket->state() == QAbstractSocket::ConnectedState)
     {
         socket->disconnectFromHost();
-        if (socket->state() != QAbstractSocket::UnconnectedState)
-        {
-            socket->waitForDisconnected();
-        }
         qDebug() << "Disconnected from the server";
+
+        // Usuń połączenie sygnału z metody readMessage()
+        disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
     }
     else
     {
