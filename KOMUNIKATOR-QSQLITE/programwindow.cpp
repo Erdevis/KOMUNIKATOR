@@ -4,9 +4,10 @@
 #include <QtNetwork/qtcpsocket>
 #include "ui_programwindow.h"
 
-ProgramWindow::ProgramWindow(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::ProgramWindow)
+ProgramWindow::ProgramWindow(const QString &loggedInUser, QWidget *parent)
+    : QDialog(parent),
+    ui(new Ui::ProgramWindow),
+    currentUsername(loggedInUser)
 {
     ui->setupUi(this);
     ui->reading->setReadOnly(true);
@@ -16,10 +17,7 @@ ProgramWindow::ProgramWindow(QWidget *parent)
 
     socket = new QTcpSocket(this);
     connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
-    connect(socket, &QTcpSocket::connected,this,&ProgramWindow::onConnected);
-
-    //socket = new QTcpSocket(this);
-    //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
 }
 /*
 void ProgramWindow::readMessage()
@@ -47,49 +45,31 @@ void ProgramWindow::readMessage()
         }
 
         // Determine whether the message is sent by the user or received
-        bool isSentByUser = line.startsWith("You:");
-        addMessage(line, isSentByUser);
+        qDebug()<<line;  //bool isSentByUser = line.startsWith(currentUsername + ":");
+        addMessage(line, false);
     }
 }
 
 
 void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
 {
-    // Utwórz nowy obiekt QTextCursor dla QTextEdit
-    QTextCursor cursor(ui->reading->textCursor());
+    /*
+    QVBoxLayout layout;
+    if(isSentByUser)
+    {
 
-    // Ustaw kursor na koniec dokumentu
-    cursor.movePosition(QTextCursor::End);
 
-    // Dodaj nową linię przed nową wiadomością (jeśli nie jest to pierwsza wiadomość)
-    if (cursor.blockNumber() > 0) {
-        cursor.insertBlock();
+        ui->reading->setAlignment(Qt::AlignLeft);
     }
+    else
+    {
 
-    // Utwórz format dla tekstu
-    QTextCharFormat format;
+        ui->reading->setAlignment(Qt::AlignRight);
+    }
+    ui->reading->append(message);
+    */
 
-    // Ustaw kolor tekstu na czarny
-    format.setForeground(QColor("#000000"));
-
-    // Ustaw białe tło wiadomości
-    format.setBackground(QColor("#ffffff"));
-
-    // Wstaw tekst z ustawionym formatem
-    cursor.insertText(message, format);
-
-    // Ustaw stronę dla tekstu w zależności od nadawcy/odbiorcy
-    QTextBlockFormat blockFormat = cursor.blockFormat();
-    blockFormat.setAlignment(isSentByUser ? Qt::AlignRight : Qt::AlignLeft);
-    cursor.setBlockFormat(blockFormat);
-
-    // Przesuń kursor na dół, aby pokazać najnowszą wiadomość
-    ui->reading->setTextCursor(cursor);
-
-    // Dodaj nową linię po wiadomości
-    cursor.insertBlock();
 }
-
 
 ProgramWindow::~ProgramWindow()
 {
@@ -104,7 +84,8 @@ void ProgramWindow::on_send_clicked()
         return;
     }
 
-    QString text = "You: " + ui->writing->toPlainText();
+    QString text;
+    text = ui->writing->toPlainText();
     text.append("\n");
     socket->write(text.toUtf8());
     addMessage(text, true);

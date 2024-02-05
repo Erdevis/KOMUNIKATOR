@@ -6,6 +6,7 @@
 #include <QTcpServer>
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
+#include "registerwindow.h"
 
 namespace Ui {
 class ProgramWindow;
@@ -16,7 +17,7 @@ class ProgramWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit ProgramWindow(QWidget *parent = nullptr);
+    explicit ProgramWindow(const QString &loggedInUser, QWidget *parent = nullptr);
     ~ProgramWindow();
 public slots:
     void updateUserList(const QStringList &users);
@@ -35,6 +36,9 @@ private:
     Ui::ProgramWindow *ui;
     QTcpSocket *socket;
     QStringList friendsIPList;
+
+    QString currentUsername;
+
     void addMessage(const QString &message, bool isSentByUser);
 };
 
