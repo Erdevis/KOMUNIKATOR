@@ -25,6 +25,7 @@ public:
     void zaloguj(const User& user);
     QVector<User> loadAllFromDatabase();
 
+
 private slots:
     void on_btnLogin_clicked();
     void on_btnRejestracja_clicked();
@@ -35,6 +36,7 @@ private:
     RegisterWindow *m_oknoRegister;
     ProgramWindow *m_oknoProgramW;   
     MainWindowLogic *m_logic;
+
 
     User* m_loggedInUser;  // pole przechowujące informacje o zalogowanym użytkowniku
 

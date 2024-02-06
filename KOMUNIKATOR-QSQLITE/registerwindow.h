@@ -5,6 +5,7 @@
 
 #include <user.h>
 #include <QMessageBox>
+#include "logicregisterwindow.h"
 
 namespace Ui {
 class RegisterWindow;
@@ -16,7 +17,7 @@ class RegisterWindow : public QDialog
 
 public:
     explicit RegisterWindow(QWidget *parent = nullptr);
-    User* createUserFromInput();//new
+    //User* createUserFromInput();//new
     ~RegisterWindow();
 
 signals:
@@ -29,6 +30,7 @@ private slots:
 
 private:
     Ui::RegisterWindow *ui;
+    LogicRegisterWindow logic;
 
 };
 

@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     logicMainwindow.cpp \
+    logicregisterwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     programwindow.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     logicMainwindow.h \
+    logicregisterwindow.h \
     mainwindow.h \
     programwindow.h \
     registerwindow.h \

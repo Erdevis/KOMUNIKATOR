@@ -53,6 +53,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
 QVector<User> MainWindow::loadAllFromDatabase()
 {
     QVector<User> users;
