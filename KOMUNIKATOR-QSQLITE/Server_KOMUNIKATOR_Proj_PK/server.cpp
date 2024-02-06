@@ -24,6 +24,7 @@ void Server::incomingConnection(qintptr socketDescriptor)
 
  if (!socket->setSocketDescriptor(socketDescriptor)) {
         qWarning() << "Nie można ustawić deskryptora gniazda:" << socket->errorString();
+        delete socket;
         return;
     }
     //socket->setSocketDescriptor(socketDescriptor);
@@ -73,7 +74,9 @@ void Server::disconnected()
     qDebug() << socket->socketDescriptor() << " Klient rozłączony";
 
     // Usuwamy klienta z listy
-    sockets.remove(socket->socketDescriptor());
+    //sockets.remove(socket->socketDescriptor());
+     sockets.remove(sockets.key(socket));
+
 
     // Usuwamy gniazdo
     socket->deleteLater();
@@ -81,30 +84,6 @@ void Server::disconnected()
     emit updatedUserList(getUserList());
 }
 
-/*
-void Server::disconnected()
-{
-    QTcpSocket *socket = (QTcpSocket*)sender();
-    qDebug() << socket->socketDescriptor() << " Klient rozłączony";
-    sockets.remove(socket->socketDescriptor()); // Usuwamy klienta z listy
-
-     socket->deleteLater(); // Usuwamy gniazdo
-
-    emit updatedUserList(getUserList());
-
-     // Ponownie uruchamiamy nasłuchiwanie serwera
-    if(!this->isListening()){
-
-        if(!this->listen(QHostAddress::Any, 4500))
-        {
-           qDebug() << "Nie mozna uruchomic serwera";
-        }
-        else
-        {
-           qDebug() << "Serwer uruchomiony!";
-        }
-    }
-}*/
 
 QStringList Server::getUserList()
 {

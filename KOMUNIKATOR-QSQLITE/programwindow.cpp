@@ -9,7 +9,7 @@ ProgramWindow::ProgramWindow( QWidget *parent, const QString &loggedInUser)
     : QDialog(parent),
     ui(new Ui::ProgramWindow),
     currentUsername(loggedInUser),
-    socket(nullptr)
+    socket(new QTcpSocket(this))
 {
     ui->setupUi(this);
     ui->reading->setReadOnly(true);
@@ -17,8 +17,11 @@ ProgramWindow::ProgramWindow( QWidget *parent, const QString &loggedInUser)
     ui->friendsList->hide();
     ui->IpEdit->setPlaceholderText("Enter IP");
 
+    connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+
     // Remove the existing connections for socket if any
-    if (socket) {
+    /*if (socket) {
         disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
         disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
         socket->deleteLater();
@@ -30,7 +33,7 @@ ProgramWindow::ProgramWindow( QWidget *parent, const QString &loggedInUser)
 
     connect(socket, &QObject::destroyed, [](){
         qDebug() << "Socket destroyed";
-    });
+    });*/
 
 }
 
@@ -121,37 +124,10 @@ void ProgramWindow::on_connectBtn_clicked()
 
     if (!serverIp.isEmpty())
     {
-        // Usuń istniejące połączenia dla gniazda, jeśli istnieją
-        if (socket) {
-            disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
-            disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
-            socket->deleteLater();
-        }
-
-        // Utwórz nowe gniazdo i nawiąż połączenie
-        socket = new QTcpSocket(this);
-        connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
-        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+        socket->abort();
         socket->connectToHost(serverIp, 4500);
     }
-
-
-    //socket = new QTcpSocket(this);
-    //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
-    //socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
-    //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
-    /*
-    QString serverIp = ui->IpEdit->text();
-    socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
-     connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
-     */
-    /*if(socket->state() == QAbstractSocket::ConnectedState) {
-        qDebug() << "Connected to the server";
-    } else {
-        qDebug() << "Not connected to the server";
-    }*/
 }
-
 
 
 void ProgramWindow::onConnected()
@@ -185,8 +161,22 @@ void ProgramWindow::on_disconectBtn_clicked()
     qDebug() << "Before deleteLater()";
     socket->deleteLater();
     qDebug() << "After deleteLater()";
+
+    socket = new QTcpSocket(this);
+    connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
 }
 
+void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
+{
+    if (item)
+    {
+        QString selectedIP = item->text();
+        ui->IpEdit->setText(selectedIP);
+        ui->friendsList->hide();
+        ui->znajomiBtn->setText("Friends");
+    }
+}
 
 /*void ProgramWindow::on_disconectBtn_clicked()
 {
@@ -255,14 +245,86 @@ void ProgramWindow::on_disconectBtn_clicked()
     }*/
 //}
 
-
-void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
-{
-    if (item)
+   /* void ProgramWindow::on_connectBtn_clicked()
     {
-        QString selectedIP = item->text();
-        ui->IpEdit->setText(selectedIP);
-        ui->friendsList->hide();
-        ui->znajomiBtn->setText("Friends");
+    QString serverIp = ui->IpEdit->text();
+
+    if (!serverIp.isEmpty())
+    {
+
+        socket->abort();
+        socket->connectToHost(serverIp, 4500);
+
+        // Usuń istniejące połączenia dla gniazda, jeśli istnieją
+        /* if (socket) {
+            disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+            disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+            socket->deleteLater();
+        }
+
+        // Utwórz nowe gniazdo i nawiąż połączenie
+        socket = new QTcpSocket(this);
+        connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+        socket->connectToHost(serverIp, 4500);*/
+    //}
+
+
+    //socket = new QTcpSocket(this);
+    //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    //socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
+    //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+    /*
+    QString serverIp = ui->IpEdit->text();
+    socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
+     connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+     */
+    /*if(socket->state() == QAbstractSocket::ConnectedState) {
+        qDebug() << "Connected to the server";
+    } else {
+        qDebug() << "Not connected to the server";
     }
-}
+}*/
+
+/*
+void ProgramWindow::on_connectBtn_clicked()
+{
+    QString serverIp = ui->IpEdit->text();
+
+    if (!serverIp.isEmpty())
+    {
+
+        socket->abort();
+        socket->connectToHost(serverIp, 4500);
+
+        // Usuń istniejące połączenia dla gniazda, jeśli istnieją
+        /* if (socket) {
+            disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+            disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+            socket->deleteLater();
+        }
+
+        // Utwórz nowe gniazdo i nawiąż połączenie
+        socket = new QTcpSocket(this);
+        connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+        socket->connectToHost(serverIp, 4500);*/
+    //}
+
+
+    //socket = new QTcpSocket(this);
+    //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+    //socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
+    //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+    /*
+    QString serverIp = ui->IpEdit->text();
+    socket->connectToHost(serverIp, 4500); // Załóżmy, że serwer nasłuchuje na porcie 4500
+     connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+     */
+    /*if(socket->state() == QAbstractSocket::ConnectedState) {
+        qDebug() << "Connected to the server";
+    } else {
+        qDebug() << "Not connected to the server";
+    }*/
+//}
+
