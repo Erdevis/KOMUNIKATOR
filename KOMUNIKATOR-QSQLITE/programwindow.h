@@ -7,6 +7,7 @@
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
 #include "registerwindow.h"
+#include <QListWidgetItem>
 
 namespace Ui {
 class ProgramWindow;
@@ -17,7 +18,7 @@ class ProgramWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit ProgramWindow(const QString &loggedInUser, QWidget *parent = nullptr);
+    explicit ProgramWindow( QWidget *parent , const QString &loggedInUser);
     ~ProgramWindow();
 public slots:
     void updateUserList(const QStringList &users);
@@ -31,6 +32,7 @@ private slots:
     void onConnected();
     void on_friendsList_itemClicked(QListWidgetItem *item);
     void on_disconectBtn_clicked();
+
 
 private:
     Ui::ProgramWindow *ui;

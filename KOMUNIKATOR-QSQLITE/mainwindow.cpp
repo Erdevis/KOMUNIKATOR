@@ -80,7 +80,7 @@ void MainWindow::on_btnLogin_clicked()
         QMessageBox::warning(this, "Błąd", "Nieprawidłowy login lub hasło.");
     }
     else{
-         m_logic->openProgramWindow();
+         m_logic->openProgramWindow(m_loggedInUser);
     }
 }
 

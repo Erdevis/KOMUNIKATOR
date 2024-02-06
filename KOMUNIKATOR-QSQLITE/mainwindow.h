@@ -5,7 +5,7 @@
 //#include "Server.h"
 #include "programwindow.h"
 #include "registerwindow.h"
-#include "mainwindowlogic.h"
+#include "logicMainwindow.h"
 #include <QtSql>
 
 QT_BEGIN_NAMESPACE

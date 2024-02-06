@@ -9,16 +9,16 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    logicMainwindow.cpp \
     main.cpp \
     mainwindow.cpp \
-    mainwindowlogic.cpp \
     programwindow.cpp \
     registerwindow.cpp \
     user.cpp
 
 HEADERS += \
+    logicMainwindow.h \
     mainwindow.h \
-    mainwindowlogic.h \
     programwindow.h \
     registerwindow.h \
     ui_programwindow.h \

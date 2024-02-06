@@ -5,10 +5,11 @@
 #include "qregularexpression.h"
 #include "ui_programwindow.h"
 
-ProgramWindow::ProgramWindow(const QString &loggedInUser, QWidget *parent)
+ProgramWindow::ProgramWindow( QWidget *parent, const QString &loggedInUser)
     : QDialog(parent),
     ui(new Ui::ProgramWindow),
-    currentUsername(loggedInUser)
+    currentUsername(loggedInUser),
+    socket(nullptr)
 {
     ui->setupUi(this);
     ui->reading->setReadOnly(true);
@@ -16,9 +17,21 @@ ProgramWindow::ProgramWindow(const QString &loggedInUser, QWidget *parent)
     ui->friendsList->hide();
     ui->IpEdit->setPlaceholderText("Enter IP");
 
+    // Remove the existing connections for socket if any
+    if (socket) {
+        disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+        disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+        socket->deleteLater();
+    }
+
     socket = new QTcpSocket(this);
     connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
     connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+
+    connect(socket, &QObject::destroyed, [](){
+        qDebug() << "Socket destroyed";
+    });
+
 }
 
 void ProgramWindow::readMessage()
@@ -47,12 +60,12 @@ void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
     if (isSentByUser)
     {
         // Wiadomość wysłana przez użytkownika (po prawej stronie)
-         formattedMessage = "<b> Me: </b>" + message;
+        formattedMessage = "<b> Me: </b>" + message;
     }
     else
     {
         // Wiadomość odebrana (po lewej stronie)
-         formattedMessage = "<b> Friend: </b>" + message;
+        formattedMessage = "<b> Friend: </b>" + message;
     }
 
     // Dodaj sformatowaną wiadomość do interfejsu użytkownika
@@ -104,25 +117,24 @@ void ProgramWindow::updateUserList(const QStringList &users)
 
 void ProgramWindow::on_connectBtn_clicked()
 {
-    if (socket && socket->state() == QAbstractSocket::ConnectedState)
-    {
-        qDebug() << "Already connected to the server";
-        return;
-    }
-
     QString serverIp = ui->IpEdit->text();
 
     if (!serverIp.isEmpty())
     {
-        friendsIPList.append(serverIp); // Add the IP to the list
+        // Usuń istniejące połączenia dla gniazda, jeśli istnieją
+        if (socket) {
+            disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+            disconnect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
+            socket->deleteLater();
+        }
 
-        // Update the friendsList widget with the new list of IPs
-        ui->friendsList->addItem(serverIp);
-
-        // Rest of the code remains unchanged
+        // Utwórz nowe gniazdo i nawiąż połączenie
+        socket = new QTcpSocket(this);
+        connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+        connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
         socket->connectToHost(serverIp, 4500);
-        //connect(socket, &QTcpSocket::connected, this, &ProgramWindow::onConnected);
     }
+
 
     //socket = new QTcpSocket(this);
     //connect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
@@ -140,16 +152,93 @@ void ProgramWindow::on_connectBtn_clicked()
     }*/
 }
 
+
+
+void ProgramWindow::onConnected()
+{
+    qDebug() << "Connected to the server";
+}
+
 void ProgramWindow::on_disconectBtn_clicked()
+{
+    if (socket && socket->state() == QAbstractSocket::ConnectedState)
+    {
+        qDebug() << "Before disconnectFromHost()";
+        socket->disconnectFromHost();
+
+        if (!socket->waitForDisconnected(4500)) // Czekaj na rozłączenie przez 3 sekundy
+        {
+            qWarning() << "Error disconnecting: " << socket->errorString();
+        }
+
+        qDebug() << "Disconnected from the server";
+    }
+    else
+    {
+        qDebug() << "Not connected to the server";
+        return;
+    }
+
+    // Usuń połączenie sygnału z metody readMessage()
+    disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+
+    qDebug() << "Before deleteLater()";
+    socket->deleteLater();
+    qDebug() << "After deleteLater()";
+}
+
+
+
+/*void ProgramWindow::on_disconectBtn_clicked()
+{
+    if (socket && socket->state() == QAbstractSocket::ConnectedState)
+    {
+        qDebug() << "Before disconnectFromHost()";
+        socket->disconnectFromHost();
+
+        // Dodaj oczekiwanie na rozłączenie
+        if (!socket->waitForDisconnected())
+        {
+            qDebug() << "Error disconnecting: " << socket->errorString();
+        }
+
+        qDebug() << "Disconnected from the server";
+    }
+    else
+    {
+        qDebug() << "Not connected to the server";
+    }
+
+    // Usuń połączenie sygnału z metody readMessage()
+    disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+
+    qDebug() << "Before deleteLater()";
+    socket->deleteLater();
+    qDebug() << "After deleteLater()";
+}*/
+
+
+/*void ProgramWindow::on_disconectBtn_clicked()
 {
 
     if (socket && socket->state() == QAbstractSocket::ConnectedState)
     {
         socket->disconnectFromHost();
+        if (socket->state() == QAbstractSocket::ConnectedState)
+        {
+            if (!socket->waitForDisconnected())
+            {
+                qDebug() << "Error disconnecting: " << socket->errorString();
+            }
+        }
+
         qDebug() << "Disconnected from the server";
 
         // Usuń połączenie sygnału z metody readMessage()
         disconnect(socket, SIGNAL(readyRead()), this, SLOT(readMessage()));
+        qDebug() << "Before deleteLater()";
+        socket->deleteLater();
+         qDebug() << "After deleteLater()";
     }
     else
     {
@@ -165,12 +254,8 @@ void ProgramWindow::on_disconectBtn_clicked()
     {
         qDebug() << "Not connected to the server";
     }*/
-}
+//}
 
-void ProgramWindow::onConnected()
-{
-    qDebug() << "Connected to the server";
-}
 
 void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
 {

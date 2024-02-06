@@ -16,16 +16,6 @@ void Server::startServer()
         qDebug() << "Serwer uruchomiony!";
     }
 
-    // Symulacja połączenia kilku użytkowników
-    for (int i = 1; i <= 5; ++i) {
-        incomingConnection(nextId);
-    }
-
-    // Symulacja rozłączenia kilku użytkowników
-    for (int i = 1; i <= 3; ++i) {
-        sockets.remove(i);
-        emit updatedUserList(getUserList());
-    }
 }
 
 void Server::incomingConnection(qintptr socketDescriptor)
