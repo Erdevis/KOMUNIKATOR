@@ -188,7 +188,6 @@ void ProgramWindow::on_disconectBtn_clicked()
 }
 
 
-
 /*void ProgramWindow::on_disconectBtn_clicked()
 {
     if (socket && socket->state() == QAbstractSocket::ConnectedState)
