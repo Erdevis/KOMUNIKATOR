@@ -8,7 +8,9 @@ RegisterWindow::RegisterWindow(QWidget *parent)
     ui->setupUi(this);
     ui->logintxt->setPlaceholderText("Login");
     ui->passwordtxt->setPlaceholderText("Password");
+    ui->passwordtxt->setEchoMode(QLineEdit::Password);
     ui->repeatPasswordtxt->setPlaceholderText("Repeat password");
+    ui->repeatPasswordtxt->setEchoMode(QLineEdit::Password);
 
     connect(&logic, &LogicRegisterWindow::nieRejestruj, this, &RegisterWindow::close);
     connect(&logic, &LogicRegisterWindow::zajerestruj, this, &RegisterWindow::zajerestruj);

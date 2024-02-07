@@ -33,11 +33,17 @@ private slots:
     void on_disconectBtn_clicked();
     void addMessage(const QString &message, bool isSentByUser);
 
+
+
 private:
     Ui::ProgramWindow *ui;
     LogicProgramWindow *logicProgramWindow;
     QStringList friendsIPList;
     QString currentUsername;
+
+    QStringList friendList;
+    void saveToFriendList(const QString &ipAddress);
+    void updateFriendListUI();
 };
 
 #endif // PROGRAMWINDOW_H

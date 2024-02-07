@@ -76,6 +76,10 @@ void ProgramWindow::on_connectBtn_clicked()
     QString serverIp = ui->IpEdit->text();
     if (!serverIp.isEmpty())
     {
+        // Save the IP address to the friend list
+        saveToFriendList(serverIp);
+
+        // Connect to the server
         logicProgramWindow->connectToServer(serverIp, 4500);
     }
 }
@@ -112,3 +116,23 @@ void ProgramWindow::updateUserList(const QStringList &users)
 {
     // Tutaj możesz dodać logikę do aktualizacji listy użytkowników
 }
+
+void ProgramWindow::saveToFriendList(const QString &ipAddress)
+{
+    // Assuming you have a QStringList member variable to store friend IPs
+    // You may need to adjust the data structure based on your application needs
+    friendList.append(ipAddress);
+
+    // Update the user interface or perform any other necessary actions
+    updateFriendListUI();
+}
+
+void ProgramWindow::updateFriendListUI()
+{
+    // Update the friends list widget or perform any other necessary actions
+    // For example, you can update a QListWidget with the friend IPs
+    ui->friendsList->clear();
+    ui->friendsList->addItems(friendList);
+}
+
+

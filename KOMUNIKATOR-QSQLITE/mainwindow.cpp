@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->txtLogin->setPlaceholderText("login");
     ui->txtHaslo->setPlaceholderText("password");
+    ui->txtHaslo->setEchoMode(QLineEdit::Password);
     m_loggedInUser = nullptr;
     ui->logo->setFixedSize(50*1.578,50);
     //QPixmap pix("images/Rekin.png");

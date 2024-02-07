@@ -34,8 +34,26 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>50</height>
+          <height>52</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 30px; /* Minimalna wysokość pola */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
         </property>
        </widget>
       </item>
@@ -44,8 +62,26 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>50</height>
+          <height>52</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 30px; /* Minimalna wysokość pola */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
         </property>
        </widget>
       </item>
@@ -54,8 +90,26 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>50</height>
+          <height>52</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    background-color: #ffffff; /* Kolor tła - biały */
+    color: #000000; /* Kolor tekstu - czarny */
+    border: 1px solid #555555; /* Grubość i kolor obramowania */
+    border-radius: 15px; /* Zaokrąglenie rogów - dostosuj według potrzeb */
+    padding: 10px; /* Wewnętrzny odstęp */
+    font-family: Arial, sans-serif; /* Rodzina czcionek */
+    font-size: 12pt; /* Rozmiar czcionki */
+    line-height: 1.5; /* Wysokość linii dla odstępu między wierszami */
+    min-height: 30px; /* Minimalna wysokość pola */
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e90ff; /* Grubość i kolor obramowania po aktywacji - niebieski */
+    outline: none; /* Wyłączanie podświetlenia po aktywacji */
+}</string>
         </property>
        </widget>
       </item>
