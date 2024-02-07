@@ -22,30 +22,45 @@ ProgramWindow::ProgramWindow( QWidget *parent, const QString &loggedInUser)
     connect(logicProgramWindow, SIGNAL(connected()), this, SLOT(onConnected()));
 }
 
+
+void ProgramWindow::on_send_clicked()
+{
+    QString text = ui->writing->toPlainText();
+    text += ";" + currentUsername;
+    logicProgramWindow->sendMessage(text);
+    ui->writing->clear();
+}
+
 void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
 {
-    qDebug()<< message;
+
+    QStringList fullMessage = message.split(";");
+    qDebug() << fullMessage;
     QString formattedMessage;
+
 
     // Get the current date and time
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    QString dateTimeString = currentDateTime.toString("yyyy-MM-dd hh:mm:ss");
+    QString dateTimeString = currentDateTime.toString("yyyy-MM-dd hh:mm");
+    QString sender;
 
     // Format the message based on the user role (sender/receiver)
+    QString senderLabel;
     if (isSentByUser)
     {
-        // Wiadomość wysłana przez użytkownika (po prawej stronie)
-        formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
-                           + "<b> Me </b> : " + message + "<br>";
+        senderLabel = "<b>" + currentUsername + "</b>";
     }
     else
     {
-        // Wiadomość odebrana (po lewej stronie)
-        formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
-                           + "<b> Friend </b> : " + message + "<br>";
+        senderLabel = "<b>" + fullMessage[1] + "</b>";
+
     }
 
-    // Dodaj sformatowaną wiadomość do interfejsu użytkownika
+    // Construct the formatted message
+    formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
+                       + senderLabel + " : " + fullMessage[0] + "<br>";
+
+    // Add the formatted message to the user interface
     ui->reading->append(formattedMessage);
 }
 
@@ -54,12 +69,7 @@ ProgramWindow::~ProgramWindow()
     delete ui;
 }
 
-void ProgramWindow::on_send_clicked()
-{
-    QString text = ui->writing->toPlainText();
-    logicProgramWindow->sendMessage(text);
-    ui->writing->clear();
-}
+
 
 void ProgramWindow::on_connectBtn_clicked()
 {
