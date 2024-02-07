@@ -70,8 +70,8 @@ QVector<User> MainWindow::loadAllFromDatabase()
 
 void MainWindow::on_btnLogin_clicked()
 {
-    QString login = ui->txtLogin->toPlainText();
-    QString password = ui->txtHaslo->toPlainText();
+    QString login = ui->txtLogin->text();
+    QString password = ui->txtHaslo->text();
 
 
     m_loggedInUser = m_logic->loginUser(login, password);

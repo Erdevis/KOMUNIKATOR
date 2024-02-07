@@ -29,9 +29,9 @@ void RegisterWindow::on_cancel_clicked()
 
 void RegisterWindow::on_zaloguj_clicked()
 {
-     QString login = ui->logintxt->toPlainText();
-     QString password = ui->passwordtxt->toPlainText();
-     QString repeatPassword = ui->repeatPasswordtxt->toPlainText();
+     QString login = ui->logintxt->text();
+     QString password = ui->passwordtxt->text();
+     QString repeatPassword = ui->repeatPasswordtxt->text();
 
      if(logic.on_zaloguj_clicked(login, password, repeatPassword))
      {
