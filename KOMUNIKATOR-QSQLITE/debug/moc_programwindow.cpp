@@ -22,7 +22,7 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ProgramWindow_t {
-    uint offsetsAndSizes[26];
+    uint offsetsAndSizes[28];
     char stringdata0[14];
     char stringdata1[15];
     char stringdata2[1];
@@ -30,12 +30,13 @@ struct qt_meta_stringdata_ProgramWindow_t {
     char stringdata4[16];
     char stringdata5[22];
     char stringdata6[22];
-    char stringdata7[12];
-    char stringdata8[12];
-    char stringdata9[27];
-    char stringdata10[17];
-    char stringdata11[5];
-    char stringdata12[24];
+    char stringdata7[27];
+    char stringdata8[17];
+    char stringdata9[5];
+    char stringdata10[24];
+    char stringdata11[11];
+    char stringdata12[8];
+    char stringdata13[13];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_ProgramWindow_t::offsetsAndSizes) + ofs), len 
@@ -48,12 +49,13 @@ static const qt_meta_stringdata_ProgramWindow_t qt_meta_stringdata_ProgramWindow
         QT_MOC_LITERAL(36, 15),  // "on_send_clicked"
         QT_MOC_LITERAL(52, 21),  // "on_znajomiBtn_clicked"
         QT_MOC_LITERAL(74, 21),  // "on_connectBtn_clicked"
-        QT_MOC_LITERAL(96, 11),  // "readMessage"
-        QT_MOC_LITERAL(108, 11),  // "onConnected"
-        QT_MOC_LITERAL(120, 26),  // "on_friendsList_itemClicked"
-        QT_MOC_LITERAL(147, 16),  // "QListWidgetItem*"
-        QT_MOC_LITERAL(164, 4),  // "item"
-        QT_MOC_LITERAL(169, 23)   // "on_disconectBtn_clicked"
+        QT_MOC_LITERAL(96, 26),  // "on_friendsList_itemClicked"
+        QT_MOC_LITERAL(123, 16),  // "QListWidgetItem*"
+        QT_MOC_LITERAL(140, 4),  // "item"
+        QT_MOC_LITERAL(145, 23),  // "on_disconectBtn_clicked"
+        QT_MOC_LITERAL(169, 10),  // "addMessage"
+        QT_MOC_LITERAL(180, 7),  // "message"
+        QT_MOC_LITERAL(188, 12)   // "isSentByUser"
     },
     "ProgramWindow",
     "updateUserList",
@@ -62,12 +64,13 @@ static const qt_meta_stringdata_ProgramWindow_t qt_meta_stringdata_ProgramWindow
     "on_send_clicked",
     "on_znajomiBtn_clicked",
     "on_connectBtn_clicked",
-    "readMessage",
-    "onConnected",
     "on_friendsList_itemClicked",
     "QListWidgetItem*",
     "item",
-    "on_disconectBtn_clicked"
+    "on_disconectBtn_clicked",
+    "addMessage",
+    "message",
+    "isSentByUser"
 };
 #undef QT_MOC_LITERAL
 
@@ -77,7 +80,7 @@ static const uint qt_meta_data_ProgramWindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -85,24 +88,22 @@ static const uint qt_meta_data_ProgramWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   62,    2, 0x0a,    1 /* Public */,
-       4,    0,   65,    2, 0x08,    3 /* Private */,
-       5,    0,   66,    2, 0x08,    4 /* Private */,
-       6,    0,   67,    2, 0x08,    5 /* Private */,
-       7,    0,   68,    2, 0x08,    6 /* Private */,
-       8,    0,   69,    2, 0x08,    7 /* Private */,
-       9,    1,   70,    2, 0x08,    8 /* Private */,
-      12,    0,   73,    2, 0x08,   10 /* Private */,
+       1,    1,   56,    2, 0x0a,    1 /* Public */,
+       4,    0,   59,    2, 0x08,    3 /* Private */,
+       5,    0,   60,    2, 0x08,    4 /* Private */,
+       6,    0,   61,    2, 0x08,    5 /* Private */,
+       7,    1,   62,    2, 0x08,    6 /* Private */,
+      10,    0,   65,    2, 0x08,    8 /* Private */,
+      11,    2,   66,    2, 0x08,    9 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QStringList,    3,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 8,    9,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 10,   11,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::Bool,   12,   13,
 
        0        // eod
 };
@@ -117,10 +118,9 @@ void ProgramWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 1: _t->on_send_clicked(); break;
         case 2: _t->on_znajomiBtn_clicked(); break;
         case 3: _t->on_connectBtn_clicked(); break;
-        case 4: _t->readMessage(); break;
-        case 5: _t->onConnected(); break;
-        case 6: _t->on_friendsList_itemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
-        case 7: _t->on_disconectBtn_clicked(); break;
+        case 4: _t->on_friendsList_itemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 5: _t->on_disconectBtn_clicked(); break;
+        case 6: _t->addMessage((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool>>(_a[2]))); break;
         default: ;
         }
     }
@@ -134,7 +134,7 @@ const QMetaObject ProgramWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_ProgramWindow_t
 , QtPrivate::TypeAndForceComplete<ProgramWindow, std::true_type>
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QStringList &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QStringList &, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<const QString &, std::false_type>, QtPrivate::TypeAndForceComplete<bool, std::false_type>
 
 
 >,
@@ -161,13 +161,13 @@ int ProgramWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 7;
     }
     return _id;
 }

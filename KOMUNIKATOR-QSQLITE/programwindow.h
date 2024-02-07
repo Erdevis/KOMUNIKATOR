@@ -1,6 +1,7 @@
 #ifndef PROGRAMWINDOW_H
 #define PROGRAMWINDOW_H
 
+#include "logicprogramwindow.h"
 #include "qlistwidget.h"
 #include <QDialog>
 #include <QTcpServer>
@@ -18,30 +19,25 @@ class ProgramWindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit ProgramWindow( QWidget *parent , const QString &loggedInUser);
+    explicit ProgramWindow(QWidget *parent, const QString &loggedInUser);
     ~ProgramWindow();
+
 public slots:
     void updateUserList(const QStringList &users);
 
 private slots:
     void on_send_clicked();
     void on_znajomiBtn_clicked();
-
     void on_connectBtn_clicked();
-    void readMessage();
-    void onConnected();
     void on_friendsList_itemClicked(QListWidgetItem *item);
     void on_disconectBtn_clicked();
-
+    void addMessage(const QString &message, bool isSentByUser);
 
 private:
     Ui::ProgramWindow *ui;
-    QTcpSocket *socket;
+    LogicProgramWindow *logicProgramWindow;
     QStringList friendsIPList;
-
     QString currentUsername;
-
-    void addMessage(const QString &message, bool isSentByUser);
 };
 
 #endif // PROGRAMWINDOW_H
