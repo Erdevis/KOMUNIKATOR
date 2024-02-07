@@ -6,8 +6,8 @@
 #include <QTcpServer>
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
-#include "registerwindow.h"
 #include <QListWidgetItem>
+#include <QDateTime>
 
 namespace Ui {
 class ProgramWindow;

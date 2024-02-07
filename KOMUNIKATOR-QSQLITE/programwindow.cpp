@@ -59,16 +59,22 @@ void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
     qDebug()<< message;
     QString formattedMessage;
 
+    // Get the current date and time
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    QString dateTimeString = currentDateTime.toString("yyyy-MM-dd hh:mm:ss");
+
     // Format the message based on the user role (sender/receiver)
     if (isSentByUser)
     {
         // Wiadomość wysłana przez użytkownika (po prawej stronie)
-        formattedMessage = "<b> Me: </b>" + message;
+        formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
+                           + "<b> Me </b> : " + message + "<br>";
     }
     else
     {
         // Wiadomość odebrana (po lewej stronie)
-        formattedMessage = "<b> Friend: </b>" + message;
+        formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
+                           + "<b> Friend </b> : " + message + "<br>";
     }
 
     // Dodaj sformatowaną wiadomość do interfejsu użytkownika
