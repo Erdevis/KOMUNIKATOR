@@ -24,7 +24,6 @@ void LogicRegisterWindow::on_cancel_clicked()
     emit nieRejestruj();
 }
 
-
 bool LogicRegisterWindow::on_zaloguj_clicked(const QString &login, const QString &password, const QString &repeatPassword)
 {
     User* newUser = createUserFromInput(login, password, repeatPassword);
@@ -39,18 +38,3 @@ bool LogicRegisterWindow::on_zaloguj_clicked(const QString &login, const QString
     }
     return false; // Rejestracja nie powiodła się
 }
-
-
-/*
-void LogicRegisterWindow::on_zaloguj_clicked(const QString &login, const QString &password, const QString &repeatPassword)
-{
-    User* newUser = createUserFromInput(login, password, repeatPassword);
-
-    if(newUser != nullptr)
-    {
-        if(newUser->saveToDatabase())
-        {
-            emit zajerestruj(*newUser);
-        }
-    }
-}*/

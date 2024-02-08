@@ -30,7 +30,6 @@ bool User::saveToFile(const QString &fileName) const
     out << m_login << "\n";
     out << m_haslo << "\n";
 
-
     file.close();
     return true;
 }
@@ -85,7 +84,6 @@ bool User::userExists(const QVector<User> &users, const QString &login, const QS
     return false;
 }
 
-
 bool User::saveToDatabase()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -120,12 +118,8 @@ bool User::saveToDatabase()
         db.close();
         return false;
     }
-
-    //db.close();
     return true;
 }
-
-
 
 User::~User()
 {

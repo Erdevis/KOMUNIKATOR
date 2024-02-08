@@ -23,7 +23,6 @@ public:
     ~ProgramWindow();
 
 public slots:
-    void updateUserList(const QStringList &users);
 
 private slots:
     void on_send_clicked();
@@ -32,8 +31,6 @@ private slots:
     void on_friendsList_itemClicked(QListWidgetItem *item);
     void on_disconectBtn_clicked();
     void addMessage(const QString &message, bool isSentByUser);
-
-
 
 private:
     Ui::ProgramWindow *ui;

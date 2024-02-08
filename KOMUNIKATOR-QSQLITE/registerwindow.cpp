@@ -39,41 +39,4 @@ void RegisterWindow::on_zaloguj_clicked()
      {
          this->close();
      }
-
-     //logic.on_zaloguj_clicked(login, password, repeatPassword);
 }
-
-
-
-/*User* RegisterWindow::createUserFromInput()
-{
-    QString login = ui->logintxt->toPlainText();
-    QString password = ui->passwordtxt->toPlainText();
-    QString repeatPassword = ui->repeatPasswordtxt->toPlainText();
-
-    if(password != repeatPassword)
-    {
-        QMessageBox mesBox;
-        mesBox.setText("NIEPRAWIDLOWE HASLO");
-        mesBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Close);
-        mesBox.setIcon(QMessageBox::Warning);
-        mesBox.exec();
-        return nullptr;
-    }
-    return new User(login,password);
-
-}
-
-void RegisterWindow::on_zaloguj_clicked()
-{
-    User* newUser = createUserFromInput();
-
-    if(newUser != nullptr)
-    {
-        if(newUser->saveToDatabase())
-        {
-            emit zajerestruj(*newUser);
-            this->close();
-        }
-    }
-}*/

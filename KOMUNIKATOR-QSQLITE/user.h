@@ -13,14 +13,12 @@ private:
     QString m_nazwisko;
     QString m_login;
     QString m_haslo;
-    //Friend_list m_friend_list;
 public:
     User(QString m_login, QString m_haslo);
     size_t getId(){return m_ID_user;}
     QString getLogin() const { return m_login; }
     QString getPassword() const { return m_haslo; }
 
-    //metody
     bool log_in(const QString& login,const QString& haslo)const;
 
 

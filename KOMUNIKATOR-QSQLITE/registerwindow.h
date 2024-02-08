@@ -17,7 +17,7 @@ class RegisterWindow : public QDialog
 
 public:
     explicit RegisterWindow(QWidget *parent = nullptr);
-    //User* createUserFromInput();//new
+
     ~RegisterWindow();
 
 signals:

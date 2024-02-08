@@ -36,16 +36,12 @@ void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
 
     QStringList fullMessage = message.split(";");
     qDebug() << fullMessage;
-    QString formattedMessage;
-
-
-    // Get the current date and time
+    QString formattedMessage;  
     QDateTime currentDateTime = QDateTime::currentDateTime();
     QString dateTimeString = currentDateTime.toString("yyyy-MM-dd hh:mm");
     QString sender;
-
-    // Format the message based on the user role (sender/receiver)
     QString senderLabel;
+
     if (isSentByUser)
     {
         senderLabel = "<b>" + currentUsername + "</b>";
@@ -56,11 +52,9 @@ void ProgramWindow::addMessage(const QString &message, bool isSentByUser)
 
     }
 
-    // Construct the formatted message
     formattedMessage = "<span style='font-size: 10px; color: #000069;'>(" + dateTimeString + ")</span><br>"
                        + senderLabel + " : " + fullMessage[0] + "<br>";
 
-    // Add the formatted message to the user interface
     ui->reading->append(formattedMessage);
 }
 
@@ -69,17 +63,12 @@ ProgramWindow::~ProgramWindow()
     delete ui;
 }
 
-
-
 void ProgramWindow::on_connectBtn_clicked()
 {
     QString serverIp = ui->IpEdit->text();
     if (!serverIp.isEmpty())
     {
-        // Save the IP address to the friend list
         saveToFriendList(serverIp);
-
-        // Connect to the server
         logicProgramWindow->connectToServer(serverIp, 4500);
     }
 }
@@ -91,11 +80,13 @@ void ProgramWindow::on_disconectBtn_clicked()
 
 void ProgramWindow::on_znajomiBtn_clicked()
 {
-    if(ui->znajomiBtn->text()=="Friends"){
+    if(ui->znajomiBtn->text()=="Friends")
+    {
         ui->znajomiBtn->setText("Select friend");
         ui->friendsList->show();
     }
-    else{
+    else
+    {
         ui->friendsList->hide();
         ui->znajomiBtn->setText("Friends");
     }
@@ -112,25 +103,14 @@ void ProgramWindow::on_friendsList_itemClicked(QListWidgetItem *item)
     }
 }
 
-void ProgramWindow::updateUserList(const QStringList &users)
-{
-    // Tutaj możesz dodać logikę do aktualizacji listy użytkowników
-}
-
 void ProgramWindow::saveToFriendList(const QString &ipAddress)
 {
-    // Assuming you have a QStringList member variable to store friend IPs
-    // You may need to adjust the data structure based on your application needs
     friendList.append(ipAddress);
-
-    // Update the user interface or perform any other necessary actions
     updateFriendListUI();
 }
 
 void ProgramWindow::updateFriendListUI()
 {
-    // Update the friends list widget or perform any other necessary actions
-    // For example, you can update a QListWidget with the friend IPs
     ui->friendsList->clear();
     ui->friendsList->addItems(friendList);
 }

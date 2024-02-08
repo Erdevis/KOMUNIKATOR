@@ -7,7 +7,6 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , m_logic(new MainWindowLogic(this))
-    //, m_logic(new MainWindowLogic())
 
 {
     ui->setupUi(this);
@@ -17,35 +16,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->txtHaslo->setEchoMode(QLineEdit::Password);
     m_loggedInUser = nullptr;
     ui->logo->setFixedSize(50*1.578,50);
-    //QPixmap pix("images/Rekin.png");
     QPixmap pix("images/Rekin.png");
     pix = pix.scaled(ui->logo->size(),Qt::KeepAspectRatio, Qt::SmoothTransformation);
     ui->logo->setScaledContents(true);
     ui->logo->setPixmap(pix);
 
-    /*
-    m_logic->openDatabase();
-
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-
-    db.setDatabaseName("Server_KOMUNIKATOR_Proj_PK\\UsersLogs.db");
-
-    bool db_ok = db.open();
-
-    db.open();
-    if(db_ok)
-        qDebug()<<"Jest smiga";
-    else
-        qDebug()<<";(((( katastrofa";
-    */
-
-    /*QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("UsersLogs.db");
-    db.open();
-    if(db_ok)
-        qDebug()<<"oadss";
-    else
-        qDebug()<<";((((";*/
 }
 
 MainWindow::~MainWindow()
@@ -53,7 +28,6 @@ MainWindow::~MainWindow()
     delete m_logic;
     delete ui;
 }
-
 
 QVector<User> MainWindow::loadAllFromDatabase()
 {
@@ -67,13 +41,10 @@ QVector<User> MainWindow::loadAllFromDatabase()
     return users;
 }
 
-
-
 void MainWindow::on_btnLogin_clicked()
 {
     QString login = ui->txtLogin->text();
     QString password = ui->txtHaslo->text();
-
 
     m_loggedInUser = m_logic->loginUser(login, password);
 
@@ -86,37 +57,6 @@ void MainWindow::on_btnLogin_clicked()
     }
 }
 
-/*void MainWindow::on_btnLogin_clicked()
-{
-    QString login = ui->txtLogin->toPlainText();
-    QString password = ui->txtHaslo->toPlainText();
-    // Odczytaj użytkowników z bazy danych
-    QVector<User> users = loadAllFromDatabase();
-    bool sukces = false;
-    for(auto i: users)
-    {
-        if(login == i.getLogin()&& password == i.getPassword())
-        {
-            sukces = true;
-
-            m_loggedInUser = new User(i);
-            break;
-        }
-    }
-    if(!sukces)
-    {
-        QMessageBox::warning(this, "Błąd", "Nieprawidłowy login lub hasło.");
-    }
-    else{
-        m_oknoProgramW = new ProgramWindow(nullptr);
-        this->hide();
-        m_oknoProgramW->exec();
-        delete m_oknoProgramW;
-        m_oknoProgramW = nullptr;
-    }
-}*/
-
-
 void MainWindow::zajerestruj()
 {
     this->show();
@@ -126,18 +66,4 @@ void MainWindow::on_btnRejestracja_clicked()
 {
     m_logic->openRegisterWindow();
 }
-
-
-/*
-void MainWindow::on_btnRejestracja_clicked()
-{
-    m_oknoRegister = new RegisterWindow(nullptr);
-    connect(m_oknoRegister, &RegisterWindow::zajerestruj,this,&MainWindow::zajerestruj);
-    connect(m_oknoRegister, &RegisterWindow::nieRejestruj,this,&MainWindow::show);
-    this->hide();
-    m_oknoRegister->exec();
-    delete m_oknoRegister;
-    m_oknoRegister = nullptr;
-
-}*/
 

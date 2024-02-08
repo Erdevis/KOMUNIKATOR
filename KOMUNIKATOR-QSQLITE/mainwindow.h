@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-//#include "Server.h"
 #include "programwindow.h"
 #include "registerwindow.h"
 #include "logicMainwindow.h"
@@ -32,11 +31,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    //Server *server;
     RegisterWindow *m_oknoRegister;
     ProgramWindow *m_oknoProgramW;   
     MainWindowLogic *m_logic;
-
 
     User* m_loggedInUser;  // pole przechowujące informacje o zalogowanym użytkowniku
 
