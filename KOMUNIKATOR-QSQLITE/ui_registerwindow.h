@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'registerwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.6.1
+** Created by: Qt User Interface Compiler version 6.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -37,12 +37,12 @@ public:
     void setupUi(QDialog *RegisterWindow)
     {
         if (RegisterWindow->objectName().isEmpty())
-            RegisterWindow->setObjectName("RegisterWindow");
+            RegisterWindow->setObjectName(QString::fromUtf8("RegisterWindow"));
         RegisterWindow->resize(536, 494);
         gridLayout_2 = new QGridLayout(RegisterWindow);
-        gridLayout_2->setObjectName("gridLayout_2");
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         frame = new QFrame(RegisterWindow);
-        frame->setObjectName("frame");
+        frame->setObjectName(QString::fromUtf8("frame"));
         frame->setStyleSheet(QString::fromUtf8("QWidget {\n"
 "            background-color: #f0f8ff; /* Delikatny niebieski kolor t\305\202a */\n"
 "            border-radius: 15px; /* Zaokr\304\205glenie rog\303\263w */\n"
@@ -50,9 +50,14 @@ public:
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         verticalLayout = new QVBoxLayout(frame);
-        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         logintxt = new QLineEdit(frame);
-        logintxt->setObjectName("logintxt");
+        logintxt->setObjectName(QString::fromUtf8("logintxt"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(logintxt->sizePolicy().hasHeightForWidth());
+        logintxt->setSizePolicy(sizePolicy);
         logintxt->setMinimumSize(QSize(0, 52));
         logintxt->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -74,7 +79,9 @@ public:
         verticalLayout->addWidget(logintxt);
 
         passwordtxt = new QLineEdit(frame);
-        passwordtxt->setObjectName("passwordtxt");
+        passwordtxt->setObjectName(QString::fromUtf8("passwordtxt"));
+        sizePolicy.setHeightForWidth(passwordtxt->sizePolicy().hasHeightForWidth());
+        passwordtxt->setSizePolicy(sizePolicy);
         passwordtxt->setMinimumSize(QSize(0, 52));
         passwordtxt->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -96,7 +103,9 @@ public:
         verticalLayout->addWidget(passwordtxt);
 
         repeatPasswordtxt = new QLineEdit(frame);
-        repeatPasswordtxt->setObjectName("repeatPasswordtxt");
+        repeatPasswordtxt->setObjectName(QString::fromUtf8("repeatPasswordtxt"));
+        sizePolicy.setHeightForWidth(repeatPasswordtxt->sizePolicy().hasHeightForWidth());
+        repeatPasswordtxt->setSizePolicy(sizePolicy);
         repeatPasswordtxt->setMinimumSize(QSize(0, 52));
         repeatPasswordtxt->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -118,7 +127,13 @@ public:
         verticalLayout->addWidget(repeatPasswordtxt);
 
         frame_2 = new QFrame(frame);
-        frame_2->setObjectName("frame_2");
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(frame_2->sizePolicy().hasHeightForWidth());
+        frame_2->setSizePolicy(sizePolicy1);
+        frame_2->setMinimumSize(QSize(0, 100));
         frame_2->setMaximumSize(QSize(16777215, 100));
         QFont font;
         font.setPointSize(12);
@@ -126,12 +141,12 @@ public:
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         gridLayout = new QGridLayout(frame_2);
-        gridLayout->setObjectName("gridLayout");
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setHorizontalSpacing(65);
         gridLayout->setVerticalSpacing(0);
         gridLayout->setContentsMargins(-1, 25, -1, -1);
         zaloguj = new QPushButton(frame_2);
-        zaloguj->setObjectName("zaloguj");
+        zaloguj->setObjectName(QString::fromUtf8("zaloguj"));
         zaloguj->setMinimumSize(QSize(0, 40));
         zaloguj->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #ffffff; /* Kolor t\305\202a - bia\305\202y */\n"
@@ -150,7 +165,7 @@ public:
         gridLayout->addWidget(zaloguj, 0, 0, 1, 1);
 
         cancel = new QPushButton(frame_2);
-        cancel->setObjectName("cancel");
+        cancel->setObjectName(QString::fromUtf8("cancel"));
         cancel->setMinimumSize(QSize(0, 40));
         cancel->setBaseSize(QSize(0, 0));
         cancel->setStyleSheet(QString::fromUtf8("QPushButton {\n"
